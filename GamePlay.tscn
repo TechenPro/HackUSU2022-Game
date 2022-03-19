@@ -12,7 +12,11 @@
 [ext_resource path="res://background.png" type="Texture" id=10]
 [ext_resource path="res://ParallaxLayer.gd" type="Script" id=11]
 [ext_resource path="res://MagicSchoolOne.ttf" type="DynamicFontData" id=12]
+<<<<<<< Updated upstream
 [ext_resource path="res://CanvasLayer.gd" type="Script" id=13]
+=======
+[ext_resource path="res://Controllers/EnemyController.gd" type="Script" id=13]
+>>>>>>> Stashed changes
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -33,6 +37,9 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 593.0 ],
 "_edit_vertical_guides_": [ 352.0 ]
 }
+
+[node name="EnemyController" type="Node2D" parent="."]
+script = ExtResource( 13 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_priority = -1

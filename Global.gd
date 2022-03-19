@@ -10,6 +10,12 @@ var player_lives
 var current_player
 var _client
 
+var background1 = preload("res://background.png")
+var background2 = preload("res://background 2.jpg")
+var background3 = preload("res://background 3.jpg")
+
+var trees = preload("res://tree-removebg-preview.png")
+
 func transition_scenes(new_scene):
 	get_tree().change_scene(new_scene)
 	
@@ -20,12 +26,9 @@ func begin_single_player_game():
 	#current_player = player
 	
 func begin_muli_player_game():
-	var ip_address =  IP.resolve_hostname(str(OS.get_environment("COMPUTERNAME")),1)
-	print("Started a multi player game. Local IP is ", ip_address)
-	connect_web_socket(str("ws://",ip_address,":2001/"))
-	print("Connected to web socket! Client is ", _client)
 	#var player = preload("res://actors/Player.gd").instance()
 	#var current_player = player
+	print("Starting multi player game")
 	
 func end_single_player_game():
 	current_player = null

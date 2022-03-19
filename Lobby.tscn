@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://MagicSchoolTwo.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Control.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFontData" id=3]
 font_path = "res://MagicSchoolOne.ttf"
@@ -20,6 +21,7 @@ font_data = ExtResource( 1 )
 [node name="Control" type="Control" parent="."]
 margin_right = 1026.0
 margin_bottom = 596.0
+script = ExtResource( 2 )
 
 [node name="IP_Holder" type="RichTextLabel" parent="Control"]
 margin_left = 27.0
@@ -47,7 +49,7 @@ margin_bottom = 332.0
 custom_fonts/normal_font = SubResource( 4 )
 text = "players joined"
 
-[node name="SinglePlayer" type="Button" parent="Control"]
+[node name="StartGame" type="Button" parent="Control"]
 margin_left = 337.0
 margin_top = 428.0
 margin_right = 710.0
@@ -58,3 +60,5 @@ custom_fonts/font = SubResource( 2 )
 action_mode = 0
 button_mask = 0
 text = "Start Game"
+
+[connection signal="pressed" from="Control/StartGame" to="Control" method="_on_StartGame_pressed"]

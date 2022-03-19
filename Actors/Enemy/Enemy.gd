@@ -17,10 +17,11 @@ onready var shape = get_node("CollisionShape2D")
 func _ready():
 	connect("body_entered", self, "_on_body_entered")
 	builder.load_sprite_data(sprite, shape)
-	path.init(self, [])
+	path.init(self, action_queue)
 	
 func _process(delta: float) -> void:
-	path.move_actor(delta)
+	#path.move_actor(delta)
+	position += velocity * delta
 
 func _on_body_entered(body):
 	pass

@@ -37,9 +37,6 @@ rect_scale = Vector2( 1.80883, 1.92403 )
 mouse_filter = 2
 input_pass_on_modal_close_click = false
 theme = SubResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SinglePlayer" type="Button" parent="VBoxContainer"]
 margin_right = 253.0

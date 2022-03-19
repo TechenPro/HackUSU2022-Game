@@ -8,8 +8,7 @@ func _on_SinglePlayer_pressed():
 	Global.transition_scenes("res://GamePlay.tscn")
 
 func _on_Multiplayer_pressed():
-	Global.begin_muli_player_game()
-	Global.transition_scenes("res://GamePlay.tscn")
+	Global.transition_scenes("res://Lobby.tscn")
 	
 func _on_Quit_pressed():
 	get_tree().quit()
