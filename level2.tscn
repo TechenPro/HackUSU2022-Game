@@ -1,0 +1,291 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Score.gd" type="Script" id=1]
+[ext_resource path="res://Lives.gd" type="Script" id=2]
+[ext_resource path="res://Burst.gd" type="Script" id=3]
+[ext_resource path="res://Power.gd" type="Script" id=4]
+[ext_resource path="res://MagicSchoolTwo.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Daco_164978.png" type="Texture" id=6]
+[ext_resource path="res://ParallaxBackground.gd" type="Script" id=7]
+[ext_resource path="res://ParallaxLayer.gd" type="Script" id=8]
+[ext_resource path="res://MagicSchoolOne.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://background 2.jpg" type="Texture" id=10]
+[ext_resource path="res://tree-removebg-preview.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_priority = -1
+follow_viewport_enable = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+script = ExtResource( 7 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 0, 590 )
+script = ExtResource( 8 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+color = Color( 0.623529, 0.623529, 0.623529, 1 )
+
+[node name="Sprite6" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 395, 292.5 )
+scale = Vector2( 1.2906, 1.23611 )
+texture = ExtResource( 11 )
+offset = Vector2( -74.3841, 59.4607 )
+
+[node name="Sprite7" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 395, 292.5 )
+scale = Vector2( 1.02564, 0.972222 )
+texture = ExtResource( 11 )
+offset = Vector2( -77.025, -11.3142 )
+
+[node name="Sprite8" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 395, 292.5 )
+scale = Vector2( 0.662393, 0.736111 )
+texture = ExtResource( 11 )
+offset = Vector2( -117, -63.1698 )
+
+[node name="Sprite9" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 395, 292.5 )
+scale = Vector2( 0.5, 0.476852 )
+texture = ExtResource( 11 )
+offset = Vector2( -160, -178.253 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 207, 423 )
+scale = Vector2( 1, 0.573727 )
+texture = ExtResource( 10 )
+offset = Vector2( 143, -219.617 )
+
+[node name="Sprite22" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 417, 93.5 )
+scale = Vector2( 1.2906, 1.23611 )
+texture = ExtResource( 11 )
+offset = Vector2( -74.3841, 59.4607 )
+
+[node name="Sprite23" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 417, 93.5 )
+scale = Vector2( 1.02564, 0.972222 )
+texture = ExtResource( 11 )
+offset = Vector2( -77.025, -11.3142 )
+
+[node name="Sprite24" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 417, 93.5 )
+scale = Vector2( 0.662393, 0.736111 )
+texture = ExtResource( 11 )
+offset = Vector2( -117, -63.1698 )
+
+[node name="Sprite25" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 417, 93.5 )
+scale = Vector2( 0.5, 0.476852 )
+texture = ExtResource( 11 )
+offset = Vector2( -160, -178.253 )
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 1.2906, 1.23611 )
+texture = ExtResource( 11 )
+offset = Vector2( -106.152, 76.4494 )
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 1.02564, 0.972222 )
+texture = ExtResource( 11 )
+offset = Vector2( -117, 10.2857 )
+
+[node name="Sprite4" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 0.662393, 0.736111 )
+texture = ExtResource( 11 )
+offset = Vector2( -178.897, -34.6415 )
+
+[node name="Sprite5" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 0.5, 0.476852 )
+texture = ExtResource( 11 )
+offset = Vector2( -242, -134.214 )
+
+[node name="Sprite10" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 1.2906, 1.23611 )
+texture = ExtResource( 11 )
+offset = Vector2( 172.788, 86.5618 )
+
+[node name="Sprite11" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 1.02564, 0.972222 )
+texture = ExtResource( 11 )
+offset = Vector2( 234, 23.1429 )
+
+[node name="Sprite12" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 0.662393, 0.736111 )
+texture = ExtResource( 11 )
+offset = Vector2( 364.587, -17.6604 )
+
+[node name="Sprite13" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 248, 402 )
+scale = Vector2( 0.5, 0.476852 )
+texture = ExtResource( 11 )
+offset = Vector2( 478, -108 )
+
+[node name="Sprite14" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 234, 160.5 )
+scale = Vector2( 1.2906, 1.23611 )
+texture = ExtResource( 11 )
+offset = Vector2( -74.3841, 59.4607 )
+
+[node name="Sprite15" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 234, 160.5 )
+scale = Vector2( 1.02564, 0.972222 )
+texture = ExtResource( 11 )
+offset = Vector2( -77.025, -11.3142 )
+
+[node name="Sprite16" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 234, 160.5 )
+scale = Vector2( 0.662393, 0.736111 )
+texture = ExtResource( 11 )
+offset = Vector2( -117, -63.1698 )
+
+[node name="Sprite17" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 234, 160.5 )
+scale = Vector2( 0.5, 0.476852 )
+texture = ExtResource( 11 )
+offset = Vector2( -160, -178.253 )
+
+[node name="Sprite18" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 594, 173 )
+scale = Vector2( 1.2906, 1.23611 )
+texture = ExtResource( 11 )
+offset = Vector2( -74.3841, 59.4607 )
+
+[node name="Sprite19" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 594, 173 )
+scale = Vector2( 1.02564, 0.972222 )
+texture = ExtResource( 11 )
+offset = Vector2( -77.025, -11.3142 )
+
+[node name="Sprite20" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 594, 173 )
+scale = Vector2( 0.662393, 0.736111 )
+texture = ExtResource( 11 )
+offset = Vector2( -117, -63.1698 )
+
+[node name="Sprite21" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color( 0.431373, 1, 0, 1 )
+position = Vector2( 594, 173 )
+scale = Vector2( 0.5, 0.476852 )
+texture = ExtResource( 11 )
+offset = Vector2( -160, -178.253 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+process_priority = 1
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 847.5, 299.312 )
+scale = Vector2( 0.435049, 0.413316 )
+texture = ExtResource( 6 )
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+margin_left = 666.0
+margin_top = 2.0
+margin_right = 1035.0
+margin_bottom = 599.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Side bar" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 37.0
+margin_top = 44.0
+margin_right = 157.0
+margin_bottom = 466.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Score:
+Lives:
+
+Power:
+Burst:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 136.0
+margin_top = 48.0
+margin_right = 328.0
+margin_bottom = 134.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "000000000"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 139.0
+margin_top = 106.0
+margin_right = 211.0
+margin_bottom = 192.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "3"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Burst" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 139.0
+margin_top = 291.0
+margin_right = 211.0
+margin_bottom = 377.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "3"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Power" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 141.0
+margin_top = 232.0
+margin_right = 255.0
+margin_bottom = 318.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "0000"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

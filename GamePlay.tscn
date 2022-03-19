@@ -1,0 +1,276 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Score.gd" type="Script" id=1]
+[ext_resource path="res://Lives.gd" type="Script" id=2]
+[ext_resource path="res://Burst.gd" type="Script" id=3]
+[ext_resource path="res://Power.gd" type="Script" id=4]
+[ext_resource path="res://MagicSchoolTwo.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Daco_164978.png" type="Texture" id=6]
+[ext_resource path="res://tree-removebg-preview.png" type="Texture" id=7]
+[ext_resource path="res://ParallaxBackground.gd" type="Script" id=8]
+[ext_resource path="res://ProgressBar.gd" type="Script" id=9]
+[ext_resource path="res://background.png" type="Texture" id=10]
+[ext_resource path="res://ParallaxLayer.gd" type="Script" id=11]
+[ext_resource path="res://MagicSchoolOne.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.678431, 0.262745, 0.262745, 1 )
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[node name="Single Player" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 593.0 ],
+"_edit_vertical_guides_": [ 352.0 ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_priority = -1
+follow_viewport_enable = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+script = ExtResource( 8 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 0, 590 )
+script = ExtResource( 11 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 2.42701, 3.26776 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -465, 254 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite3" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 55, 483 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite4" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 34, 410 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite5" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 87, 250 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite6" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 655, 473 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite7" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 676, 400 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite8" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -28, 71 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite9" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 540, 294 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite10" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 561, 221 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite11" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -319, 78 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite12" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 201, 307 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite13" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 180, 234 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite14" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -190, 252 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite15" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 382, 466 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite16" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 406, 399 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite17" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -457, -172 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite18" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 63, 57 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite19" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 42, -16 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite20" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 95, -176 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite21" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 663, 47 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite22" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 684, -26 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="Sprite23" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( -182, -174 )
+scale = Vector2( 0.974359, 0.962963 )
+texture = ExtResource( 7 )
+offset = Vector2( 559.342, 301.154 )
+
+[node name="Sprite24" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 390, 40 )
+scale = Vector2( 0.722222, 0.694444 )
+texture = ExtResource( 7 )
+
+[node name="Sprite25" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 414, -27 )
+scale = Vector2( 0.532051, 0.467593 )
+texture = ExtResource( 7 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+color = Color( 0.623529, 0.623529, 0.623529, 1 )
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+process_priority = 1
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer2"]
+position = Vector2( 847.5, 299.312 )
+scale = Vector2( 0.435049, 0.413316 )
+texture = ExtResource( 6 )
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+margin_left = 666.0
+margin_top = 2.0
+margin_right = 1035.0
+margin_bottom = 599.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Side bar" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 37.0
+margin_top = 44.0
+margin_right = 157.0
+margin_bottom = 466.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Score:
+Lives:
+
+Power:
+Burst:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 136.0
+margin_top = 48.0
+margin_right = 328.0
+margin_bottom = 134.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "000000000"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 139.0
+margin_top = 106.0
+margin_right = 211.0
+margin_bottom = 192.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "3"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Burst" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 139.0
+margin_top = 291.0
+margin_right = 211.0
+margin_bottom = 377.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "3"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Power" type="RichTextLabel" parent="CanvasLayer2/Control"]
+margin_left = 141.0
+margin_top = 232.0
+margin_right = 255.0
+margin_bottom = 318.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "0000"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="BossHealth" type="ProgressBar" parent="CanvasLayer3"]
+visible = false
+margin_right = 669.0
+margin_bottom = 22.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+value = 100.0
+percent_visible = false
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
