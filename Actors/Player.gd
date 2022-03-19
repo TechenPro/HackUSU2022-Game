@@ -26,3 +26,5 @@ func move(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, 90)
 
 	velocity = move_and_slide(velocity)
+	
+	
