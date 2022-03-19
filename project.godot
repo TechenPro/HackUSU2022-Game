@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "BulletData",
+"language": "GDScript",
+"path": "res://Bullets/BulletData.gd"
+}, {
+"base": "Resource",
+"class": "FolderListResource",
+"language": "GDScript",
+"path": "res://FolderListResource.gd"
+} ]
+_global_script_class_icons={
+"BulletData": "",
+"FolderListResource": ""
+}
+
 [application]
 
 config/name="HackUSUprogram"
