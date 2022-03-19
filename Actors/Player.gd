@@ -3,10 +3,8 @@ extends KinematicBody2D
 
 const obj_bullet = preload("res://Bullets/Bullet.tscn")
 const shot_behavior = preload("res://Bullets/Behavior/MoveForwardBehavior.tres")
-#const shot_builder = preload("res://Bullets/PlayerBulletBuilder.tres")
-const shot_builder = preload("res://Bullets/CircleBulletBuilder.tres")
+const shot_builder = preload("res://Bullets/PlayerBullet.tres")
 const shot_velocity = Vector2(0, -2000)
-const pattern_test = preload("res://Actors/Enemy/Patterns/CircularPattern.gd")
 
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
@@ -51,7 +49,6 @@ func shoot(delta):
 		b2.duration = 1
 		get_parent().add_child(b1)
 		get_parent().add_child(b2)
-		
 		
 
 func move(delta):

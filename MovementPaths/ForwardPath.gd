@@ -16,7 +16,7 @@ func init(actor_node, move_queue):
 	timer.start()
 
 func move_actor(delta, options:Dictionary={}):
-	action_queue = options.get("actions") if options.get("actions") else action_queue
+	action_queue = []
 	if(move_state):
 		move(delta)
 	
@@ -24,7 +24,7 @@ func move(delta):
 	actor.position += actor.velocity * delta
 	
 func _on_timer_timeout():
-	if(action_queue.size()):
+	if(false):
 		var action : FuncRef = action_queue.pop_front()
 		action.call_func(actor)
 	

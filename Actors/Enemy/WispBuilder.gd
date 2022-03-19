@@ -5,7 +5,8 @@ const collision = preload("res://Shapes/WispShape.tres")
 const tex = preload("res://Assets/wisp1.png")
 const idle = preload("res://Actors/Enemy/WispIdle.tres")
 
-func load_sprite_data(sprite: Sprite, shape: CollisionShape2D, options: Dictionary ={}):
+static func load_sprite_data(sprite: Sprite, shape: CollisionShape2D, options: Dictionary ={}):
+	print("Loadug")
 	sprite.set_texture(tex)
 	sprite.hframes = 3
 	sprite.offset = Vector2(-3, 0)

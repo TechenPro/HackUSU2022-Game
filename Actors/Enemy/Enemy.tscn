@@ -1,8 +1,46 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Actors/Enemy/Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Actors/Enemy/WispBuilder.tres" type="Resource" id=2]
+[ext_resource path="res://Actors/Enemy/BossBuilder.gd" type="Script" id=2]
 [ext_resource path="res://MovementPaths/ForwardPath.tres" type="Resource" id=3]
+[ext_resource path="res://Actors/Enemy/BossIdle.tres" type="Animation" id=4]
+[ext_resource path="res://Actors/Enemy/BossAttack.tres" type="Animation" id=5]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Attack"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 7, 8, 9, 8 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Move"
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -20,18 +58,21 @@ tracks/0/keys = {
 }
 
 [node name="Enemy" type="Area2D"]
-position = Vector2( 96, 61 )
 collision_layer = 2
 script = ExtResource( 1 )
 builder = ExtResource( 2 )
 path = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
-offset = Vector2( -3, 0 )
-hframes = 3
+scale = Vector2( 0.5, 0.5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
 root_node = NodePath("../..")
+anims/Attack = SubResource( 2 )
+anims/BossAttack = ExtResource( 5 )
+anims/BossIdle = ExtResource( 4 )
+anims/Idle = SubResource( 3 )
+anims/Move = SubResource( 4 )
 anims/RESET = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
