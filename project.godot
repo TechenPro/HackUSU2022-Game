@@ -8,6 +8,70 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "BulletBehavior",
+"language": "GDScript",
+"path": "res://Bullets/Behavior/BulletBehavior.gd"
+}, {
+"base": "CollidableSpriteBuilder",
+"class": "CircleBulletBuilder",
+"language": "GDScript",
+"path": "res://Bullets/CircleShotBuilder.gd"
+}, {
+"base": "Pattern",
+"class": "CircularPattern",
+"language": "GDScript",
+"path": "res://Actors/Enemy/Patterns/CircularPattern.gd"
+}, {
+"base": "Resource",
+"class": "CollidableSpriteBuilder",
+"language": "GDScript",
+"path": "res://Util/CollidableSpriteBuilder.gd"
+}, {
+"base": "Resource",
+"class": "FolderListResource",
+"language": "GDScript",
+"path": "res://FolderListResource.gd"
+}, {
+"base": "Resource",
+"class": "ForwardPath",
+"language": "GDScript",
+"path": "res://MovementPaths/ForwardPath.gd"
+}, {
+"base": "Resource",
+"class": "MoveForwardBehavior",
+"language": "GDScript",
+"path": "res://Bullets/Behavior/MoveForward.gd"
+}, {
+"base": "Resource",
+"class": "Pattern",
+"language": "GDScript",
+"path": "res://Actors/Enemy/Patterns/Pattern.gd"
+}, {
+"base": "CollidableSpriteBuilder",
+"class": "PlayerBulletBuilder",
+"language": "GDScript",
+"path": "res://Bullets/PlayerBulletBuilder.gd"
+}, {
+"base": "CollidableSpriteBuilder",
+"class": "WispBuilder",
+"language": "GDScript",
+"path": "res://Actors/Enemy/WispBuilder.gd"
+} ]
+_global_script_class_icons={
+"BulletBehavior": "",
+"CircleBulletBuilder": "",
+"CircularPattern": "",
+"CollidableSpriteBuilder": "",
+"FolderListResource": "",
+"ForwardPath": "",
+"MoveForwardBehavior": "",
+"Pattern": "",
+"PlayerBulletBuilder": "",
+"WispBuilder": ""
+}
+
 [application]
 
 config/name="HackUSUprogram"
@@ -75,6 +139,16 @@ ui_down={
 Select={
 "deadzone": 0.5,
 "events": [  ]
+}
+Shoot={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Slow={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777237,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
 }
 
 [physics]
