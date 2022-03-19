@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://VBoxContainer.gd" type="Script" id=1]
+
+[node name="Main Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+margin_left = 15.0
+margin_top = 182.0
+margin_right = 268.0
+margin_bottom = 256.0
+rect_scale = Vector2( 1.80883, 1.92403 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SinglePlayer" type="Button" parent="TextureRect/VBoxContainer"]
+margin_right = 253.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( -96, 1329 )
+text = "Single Player"
+
+[node name="Multiplayer" type="Button" parent="TextureRect/VBoxContainer"]
+margin_top = 24.0
+margin_right = 253.0
+margin_bottom = 44.0
+rect_pivot_offset = Vector2( -96, 1329 )
+text = "Multiplayer"
+
+[node name="Quit" type="Button" parent="TextureRect/VBoxContainer"]
+margin_top = 48.0
+margin_right = 253.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( -96, 1329 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
