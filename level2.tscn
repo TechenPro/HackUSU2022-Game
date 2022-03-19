@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Score.gd" type="Script" id=1]
 [ext_resource path="res://Lives.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://MagicSchoolOne.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://background 2.jpg" type="Texture" id=10]
 [ext_resource path="res://tree-removebg-preview.png" type="Texture" id=11]
+[ext_resource path="res://ProgressBar.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -19,6 +20,12 @@ font_data = ExtResource( 9 )
 [sub_resource type="DynamicFont" id=2]
 size = 40
 font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.678431, 0.262745, 0.262745, 1 )
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -224,7 +231,7 @@ margin_top = 2.0
 margin_right = 1035.0
 margin_bottom = 599.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Side bar" type="RichTextLabel" parent="CanvasLayer2/Control"]
@@ -239,7 +246,7 @@ Lives:
 Power:
 Burst:"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Score" type="RichTextLabel" parent="CanvasLayer2/Control"]
@@ -251,7 +258,7 @@ custom_fonts/normal_font = SubResource( 2 )
 text = "000000000"
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Lives" type="RichTextLabel" parent="CanvasLayer2/Control"]
@@ -263,7 +270,7 @@ custom_fonts/normal_font = SubResource( 2 )
 text = "3"
 script = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Burst" type="RichTextLabel" parent="CanvasLayer2/Control"]
@@ -275,7 +282,7 @@ custom_fonts/normal_font = SubResource( 2 )
 text = "3"
 script = ExtResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Power" type="RichTextLabel" parent="CanvasLayer2/Control"]
@@ -286,6 +293,20 @@ margin_bottom = 318.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "0000"
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="BossHealth" type="ProgressBar" parent="CanvasLayer3"]
+margin_right = 669.0
+margin_bottom = 22.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 4 )
+value = 100.0
+percent_visible = false
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

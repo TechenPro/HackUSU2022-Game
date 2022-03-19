@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Score.gd" type="Script" id=1]
 [ext_resource path="res://Lives.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://background.png" type="Texture" id=10]
 [ext_resource path="res://ParallaxLayer.gd" type="Script" id=11]
 [ext_resource path="res://MagicSchoolOne.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://CanvasLayer.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -36,6 +37,7 @@ __meta__ = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_priority = -1
 follow_viewport_enable = true
+script = ExtResource( 13 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
 script = ExtResource( 8 )
@@ -194,7 +196,7 @@ margin_top = 2.0
 margin_right = 1035.0
 margin_bottom = 599.0
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Side bar" type="RichTextLabel" parent="CanvasLayer2/Control"]
@@ -263,14 +265,14 @@ __meta__ = {
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 
 [node name="BossHealth" type="ProgressBar" parent="CanvasLayer3"]
-visible = false
 margin_right = 669.0
 margin_bottom = 22.0
 custom_styles/fg = SubResource( 3 )
 custom_styles/bg = SubResource( 4 )
-value = 100.0
 percent_visible = false
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="death" from="CanvasLayer3/BossHealth" to="." method="_on_BossHealth_death"]
